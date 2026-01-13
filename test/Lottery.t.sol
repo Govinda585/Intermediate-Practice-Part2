@@ -97,7 +97,7 @@ contract LotteryTest is Test {
         vm.deal(user1, 10 ether);
         vm.deal(user2, 10 ether);
         vm.deal(user3, 10 ether);
- vm.prank(user1);
+        vm.prank(user1);
         lottery.entry{value: 5 ether}();
 
         vm.prank(user2);
@@ -115,11 +115,7 @@ contract LotteryTest is Test {
 
         // Check that winner is actually in participants
         bool found;
-         address[3] memory participants = [
-            user1,
-            user2,
-            user3
-        ];
+        address[3] memory participants = [user1, user2, user3];
         for (uint i = 0; i < 3; i++) {
             if (winner == participants[i]) {
                 found = true;
@@ -160,3 +156,4 @@ contract LotteryTest is Test {
         }
         assertTrue(found1 && found2, "Winners must be participants");
     }
+}

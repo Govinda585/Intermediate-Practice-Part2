@@ -54,7 +54,6 @@ contract Lottery {
                 )
             )
         );
- .
         uint256 winnerIndex = randomNumber % participants.length;
         address winner = participants[winnerIndex];
 
