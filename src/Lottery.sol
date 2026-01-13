@@ -54,11 +54,15 @@ contract Lottery {
                 )
             )
         );
-
+ .
         uint256 winnerIndex = randomNumber % participants.length;
         address winner = participants[winnerIndex];
 
         emit WinnerSelected(winner);
         return winner;
+    }
+
+    function participantsLength() external view returns (uint256) {
+        return participants.length;
     }
 }
