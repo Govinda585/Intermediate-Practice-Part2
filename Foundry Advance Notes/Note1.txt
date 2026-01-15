@@ -6,3 +6,7 @@ ERC20 TOKEN Standard
 
 EIP-Ethereum Improvement Proposal 
 ERC-Ethereum Request For Comments 
+
+
+NFT
+--------------------------------
